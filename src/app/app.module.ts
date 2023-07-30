@@ -7,6 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './Components/login/login.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import { LogOutComponent } from './Components/log-out/log-out.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,12 +17,14 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    LogOutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
