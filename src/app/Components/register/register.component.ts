@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   registerForm!: FormGroup;
   submitted = false;
-
+  date:Date=new Date();
   constructor(private formBuilder: FormBuilder,private router:Router) { }
 
   ngOnInit() {
+    this.date = new Date();
       this.registerForm = this.formBuilder.group({
           title: ['', Validators.required],
           firstName: ['', Validators.required],
