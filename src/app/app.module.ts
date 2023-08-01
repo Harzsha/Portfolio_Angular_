@@ -10,6 +10,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { LogOutComponent } from './Components/log-out/log-out.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './Components/register/register.component';
 
 
 
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     DashboardComponent,
     NavbarComponent,
-    LogOutComponent
+    LogOutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
