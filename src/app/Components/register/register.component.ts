@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent {
   registerForm!: FormGroup;
   submitted = false;
   date:Date=new Date();
-  constructor(private formBuilder: FormBuilder,private router:Router) { }
+  constructor(private formBuilder: FormBuilder,private router:Router,private toastr:ToastrService) { }
 
   ngOnInit() {
     this.date = new Date();
@@ -30,6 +31,8 @@ export class RegisterComponent {
       });
   }
 
+   
+
  
   get f() { return this.registerForm.controls; }
 
@@ -39,7 +42,7 @@ export class RegisterComponent {
       if (this.registerForm.invalid) {
           return;
       }
-      alert('Success fully Registered!');
+      this.toastr.success('Success fully Registered!', 'Success');
       localStorage.setItem("userData",JSON.stringify(this.registerForm.value));
       this.router.navigate(['/login']);
   }
